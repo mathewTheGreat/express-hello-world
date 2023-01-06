@@ -1,5 +1,16 @@
 const express = require("express");
 const app = express();
+const {
+  getAllTransactions,
+  createTransaction,
+  getTransactionById,
+  updateTransaction,
+  deleteTransaction,
+} = require("./controllers/walletcontroller");
+
+const {createTransaction} = require('./services/transactionservice');
+
+const router = express.Router();
 
 app.get("/", (req, res) => {
     res.send('Mathew Momanyi')
@@ -40,26 +51,14 @@ async function findAllDocuments(model) {
   }
 }
 
-/*async function createDocument(model, document) {
-  try {
-    const result = await model.create(document);
-    return result;
-  } catch (error) {
-    console.error(error);
-    return error;
-  }
-}*/
+new transaction = {title: 'Food', iconName: 'arrow',category: 0,value: 20,type: 1,createdAt: ''}
+createTransaction(transaction) 
 
-const Test = mongoose.model('Test', new mongoose.Schema({ name: String }));
-//const newDocument = { name: 'mathew' };
-//const m = createDocument(Test, newDocument);
-
-
-findAllDocuments(Test).then(res => {
+/*findAllDocuments(Test).then(res => {
         console.log(res)
       })
       .catch(error => {
         console.error(error);
-      });
+      });*/
 
 //console.log(t)
