@@ -1,12 +1,12 @@
 const express = require("express");
 const app = express();
-const {
+/*const {
   getAllTransactions,
   createTransaction,
   getTransactionById,
   updateTransaction,
   deleteTransaction,
-} = require("./controllers/walletcontroller");
+} = require("./controllers/walletcontroller");*/
 
 const {createTransaction} = require('./services/transactionservice');
 
