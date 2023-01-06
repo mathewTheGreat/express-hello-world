@@ -28,3 +28,17 @@ mongoose.connect(
     }
   }
 );
+
+async function findAllDocuments(collection) {
+  try {
+    const documents = await collection.find({}).toArray();
+    return documents;
+  } catch (error) {
+    console.error(error);
+    return error;
+  }
+}
+
+const Test = mongoose.model('Test', new mongoose.Schema({ name: String }));
+findAllDocuments(Test);
+
