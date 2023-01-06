@@ -55,6 +55,9 @@ const Test = mongoose.model('Test', new mongoose.Schema({ name: String }));
 //const m = createDocument(Test, newDocument);
 
 
-var t = await findAllDocuments(Test)
+findAllDocuments(Test).then(
+    value => console.log(value),  // logs 42
+  error => console.log(error)
+)
 
-console.log(t)
+//console.log(t)
