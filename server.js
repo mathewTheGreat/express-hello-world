@@ -39,7 +39,21 @@ async function findAllDocuments(model) {
   }
 }
 
+async function createDocument(model, document) {
+  try {
+    const result = await model.create(document);
+    return result;
+  } catch (error) {
+    console.error(error);
+    return error;
+  }
+}
+
 const Test = mongoose.model('Test', new mongoose.Schema({ name: String }));
+const newDocument = { name: 'mathew' };
+const m = createDocument(Test, newDocument);
+
+
 var t = findAllDocuments(Test);
 
 console.log(t)
