@@ -19,7 +19,7 @@ client.connect(err => {
     const db = client.db('wallet');
 const collection = db.collection('wallet');
 
-    await collection.find({}).toArray(function(err, docs) {
+    collection.find({}).toArray(function(err, docs) {
   console.log("Found the following records");
   console.log(docs);
 });
