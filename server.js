@@ -19,7 +19,7 @@ client.connect(err => {
     const db = client.db('wallet');
 const collection = db.collection('63b7f9f80ea4ce001c42d1bb');
 
-    collection.find({}).toArray(function(err, docs) {
+    await collection.find({}).toArray(function(err, docs) {
   console.log("Found the following records");
   console.log(docs);
 });
@@ -30,6 +30,4 @@ const collection = db.collection('63b7f9f80ea4ce001c42d1bb');
   client.close();
 });
 
-const db = client.db('wallet');
-const collection = db.collection('63b7f9f80ea4ce001c42d1bb');
 
