@@ -24,7 +24,7 @@ mongoose.connect(
     if (err) {
       console.log(err);
     } else {
-      console.log("Connected to MongoDB1");
+      console.log("Connected to MongoDB");
     }
   }
 );
@@ -32,6 +32,7 @@ mongoose.connect(
 async function findAllDocuments(model) {
   try {
     const documents = await model.find({});
+      console.log(documents)
     return documents;
   } catch (error) {
     console.error(error);
