@@ -32,7 +32,7 @@ mongoose.connect(
 async function findAllDocuments(model) {
   try {
     const documents = await model.find({});
-      console.log(documents)
+     // console.log(documents)
     return documents;
   } catch (error) {
     console.error(error);
@@ -40,7 +40,7 @@ async function findAllDocuments(model) {
   }
 }
 
-async function createDocument(model, document) {
+/*async function createDocument(model, document) {
   try {
     const result = await model.create(document);
     return result;
@@ -48,11 +48,11 @@ async function createDocument(model, document) {
     console.error(error);
     return error;
   }
-}
+}*/
 
 const Test = mongoose.model('Test', new mongoose.Schema({ name: String }));
-const newDocument = { name: 'mathew' };
-const m = createDocument(Test, newDocument);
+//const newDocument = { name: 'mathew' };
+//const m = createDocument(Test, newDocument);
 
 
 var t = findAllDocuments(Test);
