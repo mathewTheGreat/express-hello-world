@@ -51,7 +51,7 @@ async function findAllDocuments(model) {
   }
 }
 
-new transaction = {title: 'Food', iconName: 'arrow',category: 0,value: 20,type: 1,createdAt: ''}
+var transaction = {title: 'Food', iconName: 'arrow',category: 0,value: 20,type: 1,createdAt: ''}
 createTransaction(transaction) 
 
 /*findAllDocuments(Test).then(res => {
