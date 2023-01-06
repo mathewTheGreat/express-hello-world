@@ -24,7 +24,7 @@ mongoose.connect(
     if (err) {
       console.log(err);
     } else {
-      console.log("Connected to MongoDB");
+      console.log("Connected to MongoDB1");
     }
   }
 );
