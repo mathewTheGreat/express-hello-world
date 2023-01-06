@@ -15,7 +15,7 @@ app.listen(process.env.PORT || 5000, () => {
 const mongoose = require("mongoose");
 //configure mongoose
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://mongo:W8C3r87LZ0mPd2b4e2j2@containers-us-west-126.railway.app:6482,
+  process.env.MONGODB_URI || "mongodb://mongo:W8C3r87LZ0mPd2b4e2j2@containers-us-west-126.railway.app:6482",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
