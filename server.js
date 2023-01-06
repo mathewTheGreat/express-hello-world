@@ -29,9 +29,9 @@ mongoose.connect(
   }
 );
 
-async function findAllDocuments(collection) {
+async function findAllDocuments(model) {
   try {
-    const documents = await collection.find({}).toArray();
+    const documents = await model.find({});
     return documents;
   } catch (error) {
     console.error(error);
