@@ -17,7 +17,7 @@ client.connect(err => {
   // perform actions on the collection object
     //console.log(collection)
     const db = client.db('wallet');
-const collection = db.collection('63b7f9f80ea4ce001c42d1bb');
+const collection = db.collection('wallet');
 
     await collection.find({}).toArray(function(err, docs) {
   console.log("Found the following records");
