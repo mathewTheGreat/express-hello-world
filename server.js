@@ -57,4 +57,4 @@ const Test = mongoose.model('Test', new mongoose.Schema({ name: String }));
 
 var t = findAllDocuments(Test);
 
-console.log(t)
+//console.log(t)
