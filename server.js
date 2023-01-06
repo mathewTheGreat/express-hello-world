@@ -23,8 +23,6 @@ const collection = db.collection('63b7f9f80ea4ce001c42d1bb');
   console.log("Found the following records");
   console.log(docs);
 });
-I hope this helps! Let me know if you have any questions.
-
 
 
 
