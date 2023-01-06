@@ -40,5 +40,6 @@ async function findAllDocuments(model) {
 }
 
 const Test = mongoose.model('Test', new mongoose.Schema({ name: String }));
-findAllDocuments(Test);
+var t = findAllDocuments(Test);
 
+console.log(t)
