@@ -55,6 +55,11 @@ const Test = mongoose.model('Test', new mongoose.Schema({ name: String }));
 //const m = createDocument(Test, newDocument);
 
 
-var t = findAllDocuments(Test);
+findAllDocuments(Test).then(res => {
+        console.log(res)
+      })
+      .catch(error => {
+        console.error(error);
+      });
 
 //console.log(t)
