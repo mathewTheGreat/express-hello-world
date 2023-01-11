@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/cyclic-software/express-hello-world#readme",
   "dependencies": {
+    "body-parser": "^1.20.1",
     "express": "^4.17.1",
     "mongodb": "^4.13.0",
     "mongoose": "^6.8.2"
