@@ -5,7 +5,8 @@ exports.getAllTransactions = async () => {
 };
  
 exports.createTransaction = async (transaction) => {
-  return await WalletModel.create(transaction);
+  const  tr = new WalletModel(transaction)
+  return await tr.save();
 };
 exports.getTransactionById = async (id) => {
   return await WalletModel.findById(id);

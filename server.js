@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const transactionroutes = require('./routes/transactionroutes')
+const router = require('./routes/transactionroutes')
 
 
 const mongoose = require("mongoose");
@@ -23,4 +23,4 @@ mongoose.connect(
 app.listen(process.env.PORT || 5000, () => {
   console.log('backend running')
 })
-app.use("/api/transactions", transactionroutes);
+app.use("/api/transactions", router);
